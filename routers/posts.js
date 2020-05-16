@@ -28,29 +28,23 @@ router.post('/', async (req,res) => {
     });
 
     try {
-        await postToDB.save();
+        postToDB.save();
+        const spawn = require('child_process').spawn;
+        var process = spawn('/usr/bin/python3', 
+                            ['child-process-carousell-scraper.py',
+                            req.body.searchParameter,
+                            req.body.keyword]);
+        process.stdout.on('data', (data) => {
 
-        res.json(postToDB);
+            // data = JSON.parse(data.toString())
+            data = data.toString();
+            console.log(data);
+            res.json(data);
+        })
     }
     catch(err) {
-        res.json({message: err})
+        res.json({message: err});
     }
-    var workerSocket = new WebSocket("ws://192.168.1.103:8082");
-    workerSocket.onopen = (event) => {
-        let message = event.data
-        console.log(message)
-    }
-    // Listen for messages
-    workerSocket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
 });
-    workerSocket.onerror = (event) => {
-        let error = event.error
-        console.log("error has ocurred", error)
-    }
 
-    
-    
-
-});
 module.exports = router; 
