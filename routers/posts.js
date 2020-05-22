@@ -10,7 +10,7 @@ const WebSocket = require('ws');
 // });
 
 router.get('/',async(req,res)=> {
-    
+    console.log("this is get")
     try {
         const fromMongoDB = await postSchema.find() 
         res.json(fromMongoDB)
@@ -21,7 +21,7 @@ router.get('/',async(req,res)=> {
 });
 
 router.post('/', async (req,res) => {
-
+    console.log(req.body)
     const postToDB = new postSchema({
         searchParameter: req.body.searchParameter,
         keyword: req.body.keyword
@@ -34,15 +34,19 @@ router.post('/', async (req,res) => {
                             ['child-process-carousell-scraper.py',
                             req.body.searchParameter,
                             req.body.keyword]);
+        var searchResult = ""
         process.stdout.on('data', (data) => {
-
-            // data = JSON.parse(data.toString())
-            data = data.toString();
-            console.log(data);
-            res.json(data);
+            data = data.toString()
+            searchResult = searchResult.concat(data)
         })
+        process.on('close',(close) => {
+            searchResult = JSON.parse(searchResult)
+            res.json(searchResult)
+        })
+
     }
     catch(err) {
+        // console.error(err)
         res.json({message: err});
     }
 });
