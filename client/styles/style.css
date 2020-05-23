@@ -1,0 +1,20 @@
+html {
+    background-color: blanchedalmond;
+}
+
+.description, .logo-image, .search-box, .table-block {
+    text-align: center;
+}
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+table, th, td {
+    border: 1px solid black;
+}
