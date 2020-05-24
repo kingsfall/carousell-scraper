@@ -13,6 +13,11 @@ However, there is a catch. As carousell is a dynamic website, more listings only
 
 I was considering using Puppeteer to handle the dynamic web content while using javascript package such as Cheerio.js to handle the DOM manipulations. Perhaps I would do that in my next project.
 
+## Finding a Macbook Air
+![Excel Screenshot](/screenshots/Excel_Screenshot.png)
+![Excel Screenshot](/screenshots/Carousell_Screenshot.png)
+I was looking around for some cheap Macbook Air after the launch of the new 2020 Macbook Air. I was surpirse at the amount of Macbook listings available right now. Without an excel, scrolling through listings on the Carousell App would have been painful and would have taken ages. I was able to find a decently price MBA 2017 i5 model at $700.  
+
 ## Future improvements
 1. Develop a more robust script using Puppeteer
 2. Develop a Web App for users to input their parameters for scraping

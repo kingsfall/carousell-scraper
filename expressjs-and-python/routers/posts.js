@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    console.log(req.signedCookies)
+    console.log(req.body)
     const postToDB = new postSchema({
         searchParameter: req.body.searchParameter,
         keyword: req.body.keyword
