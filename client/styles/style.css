@@ -2,7 +2,7 @@ html {
     background-color: blanchedalmond;
 }
 
-.description, .logo-image, .search-box, .table-block {
+.description, .logo-image, .search-box, .table-block, .filter-box {
     text-align: center;
 }
 
@@ -18,3 +18,17 @@ table {
 table, th, td {
     border: 1px solid black;
 }
+
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+

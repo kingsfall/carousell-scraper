@@ -25,6 +25,41 @@
         <input type="text" id="search-box" placeholder="Search..">
         <button type="submit" id="search-button">Submit</button>
     </div>
+    <div id="filter-box" class="filter-box">
+        <div class="row">
+            <div class="column">
+                <p>Remove $0 listing?</p>
+                <div>
+                    <input type="radio" id="yes" name="filter-$0" value="yes" checked>
+                    <label for="">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="no" name="filter-$0" value="no" checked>
+                    <label for="">No</label>
+                </div>
+                <p>Sort price by:</p>
+                <div>
+                    <input type="radio" id="ascending" name="sort-price" value="ascending" checked>
+                    <label for="">Ascending</label>
+                </div>
+                <div>
+                    <input type="radio" id="descending" name="sort-price" value="descending" checked>
+                    <label for="">Descending</label>
+                </div>
+            </div>
+            <div class="column">
+                <p>Filter word in title:</p>
+                <input type="text" id="filter-word-in-title">
+                <p>Filter word in description:</p>
+                <input type="text" id="filter-word-in-body">
+            </div>
+        </div>
+        <div>
+            <button type="submit" id="filter-submit">Submit</button>
+            <button type="reset" id="filter-reset">Reset</button>
+        </div>
+
+    </div>
     <div id="table-block">
     </div>
 </body>
