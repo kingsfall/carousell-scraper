@@ -18,6 +18,11 @@ I was considering using Puppeteer to handle the dynamic web content while using 
 ![Excel Screenshot](/screenshots/Carousell_Screenshot.png)
 I was looking around for some cheap Macbook Air after the launch of the new 2020 Macbook Air. I was surpirse at the amount of Macbook listings available right now. Without an excel, scrolling through listings on the Carousell App would have been painful and would have taken ages. I was able to find a decently price MBA 2017 i5 model at $700.  
 
+## Added a front end website
+I added a front end website on [Carousell Scraper](https://kingsfall.github.io/kingsfall-github.io/) for people to use. Download to csv is not added as I did not want to use my home server to host csv files. I will add it in if there are any request.
+
+![Website Screenshot](/screenshots/Carousell_Website.png)
+
 ## Future improvements
 1. Develop a more robust script using Puppeteer
-2. Develop a Web App for users to input their parameters for scraping
+2. ~~Develop a Web App for users to input their parameters for scraping~~
